@@ -1,6 +1,67 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Interest Calculator</title>
+
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="maindiv">
+      <h1>Simple Interest Calculator</h1>
+
+      <div class="myin">
+        <label>Amount</label>
+        <input type="number" id="principal" />
+      </div>
+      <div class="myin">
+        <label>Rate</label>
+        <input
+          type="range"
+          id="rate"
+          step="0.25"
+          min="1"
+          max="20"
+          value="10.25"
+          onchange="updateRate()"
+        />
+        <span id="rate_val"> 10.25% </span>
+      </div>
+
+      <div class="myin">
+        <label> No of years</label>
+        <select id="years">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="myin">
+        <button onclick="compute()">Compute Interest</button>
+      </div>
+      <div class="myin">
+        <span id="result"> </span>
+      </div>
+      <div class="myfot">
+        <footer>&#169; This Calculator belongs to --Ahmed--</footer>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <html>
+    <head>
+    <script src="script.js"></scrip>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -13,4 +74,4 @@
 
         <button onclick="compute()">Compute</button>
     </body>
-</html>
+</html> -->
